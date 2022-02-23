@@ -60,9 +60,9 @@ def test_on_single_image(single_image:str):
 
 def main():
     """
-    Image Augmentation for small datasets
-    Params: curr_path:str,new_path:str,num_of_images_to_create:str
-    Return Augmented images in new folder
+    Main function for displaying app in streamlit
+    Params: None
+    Return None: Go to Streamlit app to view in browser
     """
     # Description #TODO change github link
     st.markdown("<h1 style='text-align: center; color: black;'>Hijjab or No Hijjab??? </h1>",
