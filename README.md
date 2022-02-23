@@ -1,7 +1,6 @@
 # Hijjab_vs_No_Hijjab
 
-Created my own dataset using unsplash images with augmentation to determine if a woman is wearing a hijjab or not. 
-#### Model Accuracy 99% 
+Created my own dataset using unsplash images with augmentation to determine if a woman is wearing a hijjab or not. Model Accuracy obtained is 99% 
 
 ## Summary
 This application utilizes transfer learning techniques, and specifically a ResNet50 based classifier to classify whether or not a woman is wearing a hijjab "a covering or scarf over her head" (and it technically also means to cover modestly other female parts but we wont get into that). This is a binary classification ("Hijjab") or ("No Hijjab").
