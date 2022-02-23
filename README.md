@@ -5,5 +5,4 @@ Used Transfer Learning : Model Accuracy 99%
 
 
 
-Check it out below!
-#![hijjab_project2](https://user-images.githubusercontent.com/49293572/155360032-a61cbe71-0664-4af4-9736-95c5ca418db0.gif)
+![Hijjab_project_640x640](https://user-images.githubusercontent.com/49293572/155360593-bdab8555-3763-41f6-b43f-0db276e8535b.gif)
