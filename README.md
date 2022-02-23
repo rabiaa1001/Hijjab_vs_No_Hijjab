@@ -7,7 +7,10 @@ Created my own dataset using unsplash images with augmentation to determine if a
 This application utilizes transfer learning techniques, and specifically a ResNet50 based classifier to classify whether or not a woman is wearing a hijjab "a covering or scarf over her head" (and it technically also means to cover modestly other female parts but we wont get into that). This is a binary classification ("Hijjab") or ("No Hijjab").
 
 ## Women- Examples of Women With Hijjab and Without Hijjab!
-![women](https://user-images.githubusercontent.com/49293572/155369067-71286e25-67d7-489a-aae2-e5d84bbf588e.GIF)
+
+
+![women](https://user-images.githubusercontent.com/49293572/155369221-2c9f7a90-6430-4bee-ad52-a7557df1e609.GIF)
+
 
 
 
