@@ -7,11 +7,10 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import streamlit as st
-import h5py
 
 # Module level constants
 file_name = os.path.dirname(__file__) +'/hijjab_model_resnet50_v1.h5'
-MODEL = h5py.File(file_name, "r")
+MODEL = file_name
 # MODEL = 'hijjab_model_resnet50_v1.h5'
 DISPLAY_IMAGE_WIDTH,DISPLAY_IMAGE_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT = 224,224
