@@ -11,9 +11,6 @@ import streamlit as st
 
 
 # Module level constants
-# file_name = os.path.dirname(__file__) +'/hijjab_model_resnet50_v1.h5'
-# MODEL = file_name
-# MODEL = h5py.File('hijjab_model_resnet50_v2.h5')
 MODEL =  f"{getcwd()}/hijjab_model_resnet50_v2.h5"
 DISPLAY_IMAGE_WIDTH,DISPLAY_IMAGE_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT = 224,224
@@ -79,7 +76,7 @@ def main():
     # Sidebar Image and Texts
     st.sidebar.image(os.path.join('./web_images/together.jpg'), use_column_width=True)
     st.sidebar.markdown("<h1 style='text-align: left; color: pink;'>"
-                        "Upload a single or small batch of images</h1>",
+                        "Upload a single image</h1>",
                          unsafe_allow_html=True)
     st.sidebar.markdown("<h4 style='text-align: center; color: darkgray;'>"
                         "Please ensure the image is a picture of a woman, "
