@@ -36,7 +36,7 @@ def predict_single_image(single_image:str):
     Params: single_image:str
     Return Display the class of the image to Streamlit
     """
-    model = load_model(MODEL)
+    model = load_model(MODEL,compile=False)
 
     x = image.img_to_array(single_image)
     x = x[:,:,:3]
