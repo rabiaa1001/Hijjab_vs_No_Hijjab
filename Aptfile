@@ -1,5 +1,2 @@
-libsm6
-libgl1
-libxrender1
-libfontconfig1
-libice6
+libhdf5 
+
