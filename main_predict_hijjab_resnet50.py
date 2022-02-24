@@ -9,7 +9,7 @@ from PIL import Image
 import streamlit as st
 
 # Module level constants
-MODEL = '../model/hijjab_model_resnet50_v1.h5'
+MODEL = '/model/hijjab_model_resnet50_v1.h5'
 DISPLAY_IMAGE_WIDTH,DISPLAY_IMAGE_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT = 224,224
 CLS_LIST = ['Hijjab', 'No hijjab']
