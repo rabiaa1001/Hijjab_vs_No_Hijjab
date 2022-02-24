@@ -32,7 +32,6 @@ def predict_single_image(single_image:str):
     Params: single_image:str
     Return Display the class of the image to Streamlit
     """
-    
     model = load_model(MODEL)
 
     x = image.img_to_array(single_image)
@@ -66,7 +65,6 @@ def main():
     Params: curr_path:str,new_path:str,num_of_images_to_create:str
     Return Augmented images in new folder
     """
-    # Description #TODO change github link
     st.markdown("<h1 style='text-align: center; color: black;'>Hijjab or No Hijjab??? </h1>",
                 unsafe_allow_html=True)
 
