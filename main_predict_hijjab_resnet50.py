@@ -12,7 +12,8 @@ import h5py
 # Module level constants
 # file_name = os.path.dirname(__file__) +'/hijjab_model_resnet50_v1.h5'
 # MODEL = file_name
-MODEL = h5py.File('hijjab_model_resnet50_v1.h5')
+# MODEL = h5py.File('hijjab_model_resnet50_v2.h5')
+MODEL = 'hijjab_model_resnet50_v2.h5
 DISPLAY_IMAGE_WIDTH,DISPLAY_IMAGE_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT = 224,224
 CLS_LIST = ['Hijjab', 'No hijjab']
