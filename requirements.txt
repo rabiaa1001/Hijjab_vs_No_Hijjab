@@ -2,5 +2,4 @@ numpy
 Pillow
 streamlit
 tensorflow
-tables
 
