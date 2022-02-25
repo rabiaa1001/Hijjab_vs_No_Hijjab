@@ -2,16 +2,19 @@ import os
 from os import getcwd
 import numpy as np
 import tensorflow as tf
-# from tensorflow.keras import backend as K
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import streamlit as st
+import h5py
 
 
 # Module level constants
 MODEL =  f"{getcwd()}/hijjab_model_resnet50_v2.h5"
+h5 = h5py.File(MODEL,'r')
+h5.close()
+
 DISPLAY_IMAGE_WIDTH,DISPLAY_IMAGE_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT = 224,224
 CLS_LIST = ['Hijjab', 'No hijjab']
