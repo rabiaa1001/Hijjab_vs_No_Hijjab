@@ -8,6 +8,7 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import streamlit as st
+import tables
 
 
 # Module level constants
@@ -34,6 +35,8 @@ def predict_single_image(single_image:str):
     Params: single_image:str
     Return Display the class of the image to Streamlit
     """
+ 
+    tables.file._open_files.close_all()
     model = load_model(MODEL,compile=False)
 
     x = image.img_to_array(single_image)
