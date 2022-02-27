@@ -10,7 +10,7 @@ from PIL import Image
 import streamlit as st
 
 
-MODEL = load_model('../hijjab_model_resnet50_v2.h5',compile=False)
+MODEL = load_model('hijjab_model_resnet50_v2.h5',compile=False)
 CLS_LIST = ['Hijjab', 'No Hijjab']
 DISPLAY_IMG_WIDTH,DISPLAY_IMG_HEIGHT = 300,300
 IMAGE_WIDTH,IMAGE_HEIGHT= 224,224
