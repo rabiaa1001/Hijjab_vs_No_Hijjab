@@ -3,11 +3,9 @@ import numpy as np
 from collections import defaultdict
 import typing as t
 import tensorflow as tf
-# from tensorflow.keras import backend as K
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
-import PIL
 from PIL import Image
 import streamlit as st
 
@@ -45,7 +43,7 @@ def single_image(single_image:str):
     Return Display the class of the image to Streamlit
     """
 
-    if not issubclass(type(single_image),PIL.Image.Image):
+    if not issubclass(type(single_image),Image.Image):
         raise TypeError("Expecting <class 'PIL.Image.Image'>")
 
     x = image.img_to_array(single_image)
