@@ -2,8 +2,6 @@ import os
 import numpy as np
 from collections import defaultdict
 import typing as t
-import tensorflow as tf
-# from tensorflow.keras import backend as K
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
@@ -20,9 +18,19 @@ IMAGE_WIDTH, IMAGE_HEIGHT = 224, 224
 @st.cache
 def load_image_and_resize(image_file: str, width: int, height: int):
     """
-    Load the image and resize it according to params
-    Params: image_file:str,width:int,height:int
-    Return Resized PIL image
+    1.Load the image
+    2.Resize image according to params
+    -------------------------
+    Parameters
+    -------------------------
+    image_file: str
+        - image to load and resize
+    width: int
+        - width to resize image to
+    height: int
+        - height to resize image to
+    --------------------------
+    Return: Return resized PIL image
     """
     try:
         if not isinstance(image_file, str):
@@ -40,13 +48,17 @@ def load_image_and_resize(image_file: str, width: int, height: int):
     return img
 
 
-def single_image(single_image: str):
+def single_image(single_image: Image):
     """
     Given a single image, predict whether or not the woman is wearing hijjab
-    Params: single_image:str
-    Return Display the class of the image to Streamlit
+    -------------------------
+    Parameters
+    -------------------------
+    single_image:PIL object
+        - image to load and predict
+    -------------------------
+    Return: Image and prediction displayed on Streamlit
     """
-
     if not issubclass(type(single_image), Image.Image):
         raise TypeError("Expecting <class 'PIL.Image.Image'>")
 
@@ -78,9 +90,11 @@ def single_image(single_image: str):
 
 def main():
     """
-    Image Augmentation for small datasets
-    Params: curr_path:str,new_path:str,num_of_images_to_create:str
-    Return Augmented images in new folder
+    Function to run Streamlit on uploaded image and predict class
+    -------------------------
+    Parameters: None
+    -------------------------
+    Return: Image and prediction displayed on Streamlit
     """
     st.markdown(
         "<h1 style='text-align: center; color: black;'>Hijjab or No Hijjab??? </h1>",
