@@ -11,6 +11,9 @@ import pytest
 
 @pytest.mark.parametrize('width,height', [(150, 150), (224, 224), (256, 256)])
 def test_load_image_and_resize(width, height):
+    """
+    Test to load image and verify the resize
+    """
     # Ensure different sizes will be resized as expected
     img = load_image_and_resize(
         './Test_images/hijjabs0.jpg',
@@ -25,11 +28,14 @@ def test_load_image_and_resize(width, height):
 @pytest.mark.parametrize('picture,image_class',
                          [('none4.jpg', 'No Hijjab'), ('hijjab1.jpg', 'Hijjab')])
 def test_single_image(picture, image_class):
+    """
+    Test to verify predictions for both classes 'Hijjab' and 'No Hijjab'
+    """
     # Create a class list
     CLS_LIST = ['Hijjab', 'No Hijjab']
     # Retrieve the model
     MODEL = load_model(
-        '../hijjab_model_resnet50_v2.h5',
+        'hijjab_model_resnet50_v2.h5',
         compile=False)
     # Open each image to test
     img = Image.open(
