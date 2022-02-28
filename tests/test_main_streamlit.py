@@ -12,9 +12,11 @@ import pytest
 def test_load_image_and_resize(width,height):
     # Ensure different sizes will be resized as expected
     img = load_image_and_resize(
-        '/Users/rabia/PycharmProjects/pythonProject/hijjab_vs_non_hijjab_project/python_py_test/Test_images/hijjabs0.jpg', width, height)
+        './Test_images/hijjabs0.jpg', width, height)
+    
     # Ensure Image is a PIL.Image.Image subclass
     assert issubclass(type(img), PIL.Image.Image)
+    
     # Assert size of image
     assert img.size == (width, height)
 
